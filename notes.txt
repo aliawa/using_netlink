@@ -1,0 +1,27 @@
+
+# get list of local interfaces
+# -----------------------------------
+#include <net/if.h>
+
+if_nameindex()
+
+
+
+ip route list match  192.168.20.1
+ip route list match  192.168.20.1/24
+ip route list to match  192.168.20.1
+ip route show to match 192.168.80.1
+ip route get 192.168.100.4
+
+
+
+# libnl DEBUG
+# -----------------------------------
+
+#enable verbose errors
+lib/defs.h  --> #define VERBOSE_ERRORS
+
+# set NLDBG on command line
+sudo NLDBG=7 ./mand -t 0x2
+
+
